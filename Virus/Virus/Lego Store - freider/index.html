@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="titulolego">Lego Store By freider</h1>
+        <a><img class="carrito" id="carritoCompra" src="carrito-de-compras.png" alt="carrito"></a>
+    </header>
+    <div id="contenedor" class="contenedor">
+        <div class="producosvista">
+            <img src="lego0.1.webp" alt="producto 1">
+            <div class="informacion">
+                <p>Guardianes De La Galaxia</p>
+                <p class="precio">$100<span>.99</span></p>
+                <button id="producto1">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego0.2.webp" alt="producto 2">
+            <div class="informacion">
+                <p>Barco Titanic</p>
+                <p class="precio">$880<span>.50</span></p>
+                <button id="producto2">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego3.png" alt="producto 3">
+            <div class="informacion">
+                <p>Nave Star Wars</p>
+                <p class="precio">$237<span>.99</span></p>
+                <button id="producto3">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego4.jpeg" alt="producto 4">
+            <div class="informacion">
+                <p>Barco Pirata</p>
+                <p class="precio">$199<span>.99</span></p>
+                <button id="producto4">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego5.jpg" alt="producto 5">
+            <div class="informacion">
+                <p>Casa Blanca</p>
+                <p class="precio">$289<span>.10</span></p>
+                <button id="producto5">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego6.jpg" alt="producto 6">
+            <div class="informacion">
+                <p>Ciudad Rampa</p>
+                <p class="precio">$150<span>.89</span></p>
+                <button id="producto6">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego7.jpg" alt="producto 7">
+            <div class="informacion">
+                <p>Sigapore Lego</p>
+                <p class="precio">$459<span>.00</span></p>
+                <button id="producto7">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego8.jpg" alt="producto 8">
+            <div class="informacion">
+                <p>Unicornio Lego</p>
+                <p class="precio">$49<span>.50</span></p>
+                <button id="producto8">Comprar</button>
+            </div>
+        </div>
+        <div class="producosvista">
+            <img src="lego9.jpeg" alt="producto 9">
+            <div class="informacion">
+                <p>Friends Lego</p>
+                <p class="precio">$220<span>.99</span></p>
+                <button id="producto9">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="my_modal" class="modal">
+        <div class="modal-box bg-white">
+            <h3 class="font-bold text-lg">Carrito de Compras</h3>
+            <hr>
+            <div id="carrito_lista"></div> <!-- Aquí se mostrará la lista de productos en el carrito -->
+            <hr>
+            <h4 id="total_precio"></h4>
+            <p class="py-4">Presiona ESC o el botón "Cerrar" para cerrar</p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn bg-green-700 text-white" onclick="document.getElementById('my_modal_confirmar').showModal()" id="btn_confirmar_modal">Confirmar Compra</button>
+                    <button class="btn bg-red-700 text-white" id="btn_limpiar_modal">Vaciar Carrito</button>
+                    <button class="btn text-white" id="btn_cerrar_modal">Cerrar</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="my_modal_confirmar" class="modal">
+        <div class="modal-box bg-white">
+            <h3 class="font-bold text-lg">Se ha realizado la compra!</h3>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn bg-green-700 text-white" id="btn_confirmar_modal">Ok</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+</body>
+<script src="app.js"></script>
+
+</html>
